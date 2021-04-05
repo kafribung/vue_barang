@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <div class="text-sm font-extrabold">Kafri</div>
+      <div class="text-red-600 font-extrabold">Mantap</div>
   </div>
 </template>
 
