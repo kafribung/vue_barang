@@ -115,8 +115,7 @@
       <!-- Backdrop -->
       <div  v-show="toggleSideMenuMobile" x-transition:enter="transition ease-in-out duration-150" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center" > </div>
       <!-- END Backdrop -->
-      <transition  name="toggleSideMenuMobile">
-      <aside class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden" v-show="toggleSideMenuMobile"  x-transition:enter="transition ease-in-out duration-150" x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0 transform -translate-x-20" @click="closeSideMenu = !closeSideMenu" v-on:keyup.escape="closeSideMenu = !closeSideMenu" >
+      <aside class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden" v-show="toggleSideMenuMobile"  x-transition:enter="transition ease-in-out duration-150" x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0 transform -translate-x-20">
         <div class="py-4 text-gray-500 dark:text-gray-400">
           <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#" >Windmill</a>
           <ul class="mt-6">
@@ -220,16 +219,16 @@
           </div>
         </div>
       </aside>
-      </transition>
       
       <!-- END Mobile sidebar -->
 
-      <!-- Main -->
+      <!-- Headr & Main -->
       <div class="flex flex-col flex-1 w-full">
+        <!-- Header -->
         <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
           <div class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300" >
             <!-- Mobile hamburger -->
-            <button class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple" v-on:click="toggleSideMenuMobile = !toggleSideMenuMobile" aria-label="Menu" >
+            <button class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple" v-on:click="toggleSideMenuMobile = !toggleSideMenuMobile" v-on:keyup.escape="toggleSideMenuMobile =  false" aria-label="Menu" >
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" ></path> </svg>
             </button>
             <!-- Search input -->
@@ -330,9 +329,13 @@
             </ul>
           </div>
         </header>
+        <!-- END Header -->
+
+        <!-- Main -->
+        <!-- END Main -->
 
       </div>
-      <!-- END Main -->
+      <!-- END Headar & Main -->
 
     </div>
   </div>
