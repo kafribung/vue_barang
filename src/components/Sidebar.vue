@@ -229,7 +229,7 @@ export default {
             // Side Bar
             togglePagesMenu: false,
             closeSideMenu: false,
-            // toggleSideMenuMobile: false,
+            toggleSideMenuMobile: false,
         }
     },
 };
