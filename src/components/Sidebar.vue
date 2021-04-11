@@ -226,9 +226,10 @@ export default {
     name: "Sidebar",
     data() {
         return {
-            isSideMenuOpen: false,
+            // Side Bar
             togglePagesMenu: false,
             closeSideMenu: false,
+            // toggleSideMenuMobile: false,
         }
     },
 };
