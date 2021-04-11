@@ -119,12 +119,10 @@ export default {
     },
     methods: {
         toggleSideMenuMobile(){
-            // localStorage.setItem('toggleSideMenuMobile', false)
-            console.log((localStorage.getItem('toggleSideMenuMobile')));
-            if (localStorage.getItem('toggleSideMenuMobile') == 'true'){
-                localStorage.setItem('toggleSideMenuMobile', false)
-            } else if (localStorage.getItem('toggleSideMenuMobile') == 'false') {
+            if (localStorage.getItem('toggleSideMenuMobile') == null || localStorage.getItem('toggleSideMenuMobile') == 'false'){
                 localStorage.setItem('toggleSideMenuMobile', true)
+            } else if (localStorage.getItem('toggleSideMenuMobile') == 'true') {
+                localStorage.setItem('toggleSideMenuMobile', false)
             }
         }
     },
