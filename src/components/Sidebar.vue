@@ -109,7 +109,7 @@
         </aside>
         <!-- END Desktop sidebar -->
 
-        <h1> Sapi{{ toggleSideMenu }}</h1>
+        <h1> Data : {{ toggleSideMenu }}</h1>
 
         <!-- Mobile sidebar -->
         <!-- Backdrop -->
@@ -231,18 +231,17 @@ export default {
             // Side Bar
             togglePagesMenu: false,
             closeSideMenu: false,
-            toggleSideMenu: 'ok',
+            toggleSideMenu: '',
         }
-    },
-    created() {
-        this.getToggleSideMenuMobile
     },
     methods: {
-        getToggleSideMenuMobile(){
-            let data = localStorage.getItem('toggleSideMenuMobile')
-            console.log(data)
-        }
     },
+    computed:{
+        getToggleSideMenuMobile(){
+            let test=  localStorage.getItem('toggleSideMenuMobile')
+            return this.toggleSideMenu = test
+        }
+    }
 };
 </script>
 
