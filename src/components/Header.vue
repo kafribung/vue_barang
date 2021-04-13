@@ -117,9 +117,16 @@ export default {
             toggleProfileMenu: false,
         }
     },
+    mounted() {
+        this.setToggleSideMenuMobile()
+    },
     methods: {
+        setToggleSideMenuMobile(){
+            localStorage.setItem('toggleSideMenuMobile', false)
+        },
         toggleSideMenuMobile(){
-            if (localStorage.getItem('toggleSideMenuMobile') == null || localStorage.getItem('toggleSideMenuMobile') == 'false'){
+            // localStorage.getItem('toggleSideMenuMobile') == null ||
+            if ( localStorage.getItem('toggleSideMenuMobile') == 'false'){
                 localStorage.setItem('toggleSideMenuMobile', true)
             } else if (localStorage.getItem('toggleSideMenuMobile') == 'true') {
                 localStorage.setItem('toggleSideMenuMobile', false)

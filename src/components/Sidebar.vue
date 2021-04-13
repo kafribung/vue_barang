@@ -235,10 +235,10 @@ export default {
         }
     },
     created() {
-        this.getToggleSideMenu
+        this.getToggleSideMenuMobile
     },
     methods: {
-        getToggleSideMenu(){
+        getToggleSideMenuMobile(){
             let data = localStorage.getItem('toggleSideMenuMobile')
             console.log(data)
         }
