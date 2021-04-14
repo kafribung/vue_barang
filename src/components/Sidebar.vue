@@ -234,8 +234,6 @@ export default {
             toggleSideMenu: '',
         }
     },
-    methods: {
-    },
     computed:{
         getToggleSideMenuMobile(){
             let test=  localStorage.getItem('toggleSideMenuMobile')
