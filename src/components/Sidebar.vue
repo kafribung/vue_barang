@@ -235,7 +235,6 @@ export default {
         }
     },
     computed:{
-        // Errro
         getToggleSideMenuMobile(){
             let test=  localStorage.getItem('toggleSideMenuMobile')
             return this.toggleSideMenu = test
