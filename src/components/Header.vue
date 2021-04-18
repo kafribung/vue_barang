@@ -109,29 +109,5 @@
 <script>
 export default {
     name: "Header",
-    data() {
-        return {
-            // Header
-            toggleTheme: false,
-            toggleNotificationsMenu: false,
-            toggleProfileMenu: false,
-        }
-    },
-    mounted() {
-        this.setToggleSideMenuMobile()
-    },
-    methods: {
-        setToggleSideMenuMobile(){
-            localStorage.setItem('toggleSideMenuMobile', false)
-        },
-        toggleSideMenuMobile(){
-            // localStorage.getItem('toggleSideMenuMobile') == null ||
-            if ( localStorage.getItem('toggleSideMenuMobile') == 'false'){
-                localStorage.setItem('toggleSideMenuMobile', true)
-            } else if (localStorage.getItem('toggleSideMenuMobile') == 'true') {
-                localStorage.setItem('toggleSideMenuMobile', false)
-            }
-        }
-    },
 }
 </script>
