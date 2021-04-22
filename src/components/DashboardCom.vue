@@ -92,6 +92,6 @@
 
 <script>
 export default {
-  name: 'Dashboard Component',
+  name: 'Dashboardcom',
 }
 </script>

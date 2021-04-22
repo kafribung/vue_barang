@@ -328,7 +328,7 @@
             </div>
         </header>
         <!-- END Header -->
-        <DashboardCom/>
+        <Dashboardcom/>
       </div>
       <!-- END Headar & Main -->
     </div>
@@ -336,7 +336,7 @@
 </template>
 
 <script>
-import DashboardCom from './components/DashboardCom'
+import Dashboardcom from './components/Dashboardcom'
 export default {
   name: "Dashboard",
   data() {
@@ -353,13 +353,19 @@ export default {
     };
   },
   methods: {
+    // Dark Mode
     clickToggleTheme(){
-        this.toggleTheme = !this.toggleTheme
-        
+        if (this.toggleTheme) {
+          document.documentElement.classList.add('dark')
+          this.toggleTheme = !this.toggleTheme
+        } else {
+          document.documentElement.classList.remove('dark')
+          this.toggleTheme = !this.toggleTheme
+        }
     }
   },
   components: {
-    DashboardCom,
+    Dashboardcom,
   },
 };
 </script>
