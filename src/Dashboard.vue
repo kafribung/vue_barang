@@ -328,7 +328,7 @@
             </div>
         </header>
         <!-- END Header -->
-        
+        <DashboardCom/>
       </div>
       <!-- END Headar & Main -->
     </div>
@@ -336,7 +336,7 @@
 </template>
 
 <script>
-// import Sidebar from './components/Sidebar'
+import DashboardCom from './components/DashboardCom'
 export default {
   name: "Dashboard",
   data() {
@@ -353,6 +353,7 @@ export default {
     };
   },
   components: {
+    DashboardCom,
   },
 };
 </script>
