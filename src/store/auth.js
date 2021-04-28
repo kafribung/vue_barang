@@ -4,5 +4,9 @@ export default {
     },
     mutations: {
     },
-    actions: {},
+    actions: {
+        async handleLogin() {
+            const response = await ();
+        }
+    },
 }
