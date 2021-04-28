@@ -1,3 +1,4 @@
+import axios from 'axios'
 export default {
     state: {
         user: {},
@@ -6,7 +7,7 @@ export default {
     },
     actions: {
         async handleLogin() {
-            const response = await ();
+            const response = await ;
         }
     },
 }
