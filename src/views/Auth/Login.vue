@@ -39,7 +39,6 @@ export default {
         // handleLogin(){
         //     this.$store.dispatch('login', this.form)
         // },
-
         // Cara 2
         ...mapActions([
             'login'
