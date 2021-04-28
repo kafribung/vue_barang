@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {    
     name:'Login',
     data() {
@@ -34,8 +35,17 @@ export default {
         }
     },
     methods: {
+        // Cara 1
+        // handleLogin(){
+        //     this.$store.dispatch('login', this.form)
+        // },
+
+        // Cara 2
+        ...mapActions([
+            'login'
+        ]),
         handleLogin(){
-            console.log('sapi');
+            this.login(this.form)
         },
     },
 }
