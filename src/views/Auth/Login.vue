@@ -43,9 +43,9 @@ export default {
         ...mapActions([
             'login'
         ]),
-        handleLogin(){
-            this.login(this.form)
-        },
+        // handleLogin(){
+        //     this.login(this.form)
+        // },
     },
 }
 </script>
