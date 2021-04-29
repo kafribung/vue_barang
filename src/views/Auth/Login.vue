@@ -36,13 +36,13 @@ export default {
     },
     methods: {
         // Cara 1
-        // handleLogin(){
-        //     this.$store.dispatch('login', this.form)
-        // },
+        handleLogin(){
+            this.$store.dispatch('login', this.form)
+        },
         // Cara 2
-        ...mapActions([
-            'login'
-        ]),
+        // ...mapActions([
+        //     'login'
+        // ]),
         handleLogin(){
             this.login(this.form)
         },
