@@ -40,9 +40,9 @@ export default {
             this.$store.dispatch('login', this.form)
         },
         // Cara 2
-        // ...mapActions([
-        //     'login'
-        // ]),
+        ...mapActions([
+            'login'
+        ]),
         handleLogin(){
             this.login(this.form)
         },
