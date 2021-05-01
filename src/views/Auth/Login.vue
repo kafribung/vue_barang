@@ -34,9 +34,7 @@ export default {
             form: {}
         }
     },
-    computed:{
-        
-    },
+   
     methods: {
         // Cara 1
         // handleLogin(){

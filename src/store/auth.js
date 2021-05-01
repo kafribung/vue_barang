@@ -4,6 +4,11 @@ export default {
         token: null,
         user: null,
     },
+    getters: {
+        getUser: state => {
+            return user
+        }
+    },
     mutations: {
         SET_NAME(state, name) {
             state.user = name  
