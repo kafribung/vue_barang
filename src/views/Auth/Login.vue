@@ -9,13 +9,10 @@
                     <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                     <form v-on:submit.prevent="handleLogin">
                         <div class="w-full">
-                            <div v-if="getError != null">
-                                <p>{{ getError }}</p>
-                            </div>
-                            <div v-else>Ok</div>
                             <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">Login {{ form.email }} - {{ form.password }}</h1>
                             <label class="block text-sm"><span class="text-gray-700 dark:text-gray-400">Email</span>
-                            <input  v-model="form.email" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none bg-gray-100 py-2 rounded-md focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray" placeholder="Jane Doe" type="text" />
+                            <input  v-model="form.email" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none bg-gray-100 py-2 rounded-md focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray" placeholder="user@user.com" type="email" />
+                            <small v-if="getError" class="text-red-500">{{ getError }}</small>
                             </label>
                             <label class="block mt-4 text-sm"><span class="text-gray-700 dark:text-gray-400">Password</span>
                             <input  v-model="form.password" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none bg-gray-100 py-2 rounded-md focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="password" type="password" /></label>
