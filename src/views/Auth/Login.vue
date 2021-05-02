@@ -46,6 +46,7 @@ export default {
         ]),
         handleLogin(){
             this.login(this.form)
+            // this.$router.push('/dashboard');
         },
     },
 }
