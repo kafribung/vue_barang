@@ -4,7 +4,7 @@ export default {
         // Untuk tujuan belajar, data yang ada di state hanya dapat diakses di login
         // Sehingga data harus disimpan di localstorage
         token: null,
-        errors: {},
+        errors: null,
     },
     getters: {
         getError: state => {

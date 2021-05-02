@@ -9,8 +9,8 @@
                     <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                     <form v-on:submit.prevent="handleLogin">
                         <div class="w-full">
-                            <div v-if="getErrors.legth != 0">
-                                <p>{{ getErrors }}</p>
+                            <div v-if="getError != null">
+                                <p>{{ getError }}</p>
                             </div>
                             <div v-else>Ok</div>
                             <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">Login {{ form.email }} - {{ form.password }}</h1>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import {mapActions, mapGetters} from 'vuex'
 export default {    
     name:'Login',
     data() {
@@ -40,12 +40,20 @@ export default {
     },
     computed:{
         // Cara 1 Getters
-        getErrors(){
-            return this.$store.getters.getError
-        }
+        // getError(){
+        //     return this.$store.getters.getError
+        // }
+
+        // Cara 2
+        ...mapGetters([
+            'getError'
+        ])
+    },
+    created() {
+        console.log(this.getError);
     },
     methods: {
-        // Cara 1
+        // Cara 1 Action
         // handleLogin(){
         //     this.$store.dispatch('login', this.form)
         // },
