@@ -97,7 +97,7 @@ export default {
     //   return this.$store.getters.user
     // }
     ...mapGetters([
-      'getUser'
+      'getT'
     ])
   }
 }

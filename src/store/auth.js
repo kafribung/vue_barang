@@ -4,17 +4,18 @@ export default {
         // Untuk tujuan belajar, data yang ada di state hanya dapat diakses di login
         // Sehingga data harus disimpan di localstorage
         token: null,
-        user: null,
+        errors: {},
     },
     getters: {
-        getUser: state => {
-            return state.user
+        getError: state => {
+            return state.errors
         }
     },
     mutations: {
-        SET_NAME(state, name) {
-            state.user = name  
+        SET_ERROR(state, name) {
+            state.errors = name  
         },
+        // Tidak dipakai
         SET_TOKEN(state, token) {
             state.token = token
         }
@@ -23,12 +24,11 @@ export default {
         async login({ commit, dispatch }, data) {
             try {
                 const response = await axios.post('http://127.0.0.1:8000/api/login', data);
-                // Langusung melakukan mutasi, tanpa mengirim data
-                commit('SET_NAME', response.data.data.name)
-                // Mengirim daata ke method attemp
+                // Mengirim data ke method attemp
                 dispatch('attemp', response.data.data.token)
             } catch (error) {
-                console.log(error.response.data.data)
+                // Langusung melakukan mutasi, tanpa mengirim data
+                commit('SET_ERROR', error.response.data.msg)
             }
         },
         // Method Attemp Set Token yang dikirim dari method login
