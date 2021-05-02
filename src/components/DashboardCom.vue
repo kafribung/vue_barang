@@ -80,9 +80,7 @@
       <div class="grid gap-6 mb-8  md:grid-cols-1 xl:grid-cols-1">
         <!-- Card -->
         <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-          <p class="mb-2 text-sm text-center font-medium text-gray-600 dark:text-gray-400">
-            Large, full width sections goes here
-          </p>
+          <p class="mb-2 text-sm text-center font-medium text-gray-600 dark:text-gray-400"></p>
         </div>
       </div>
     </div>
@@ -93,5 +91,10 @@
 <script>
 export default {
   name: 'Dashboardcom',
+  computed:{
+    user(){
+      return this.$store.getters.user
+    }
+  }
 }
 </script>
