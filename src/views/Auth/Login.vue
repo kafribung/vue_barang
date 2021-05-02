@@ -43,7 +43,6 @@ export default {
         // getError(){
         //     return this.$store.getters.getError
         // }
-
         // Cara 2
         ...mapGetters([
             'getError'
