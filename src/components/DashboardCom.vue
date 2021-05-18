@@ -91,8 +91,8 @@
 <script>
 // import { mapGetters} from 'vuex'
 export default {
-  // name: 'Dashboardcom',
-  // computed:{
+  name: 'Dashboardcom',
+  computed:{
     getUser(){
       // Tanpa getters langsung tembah state
       return this.$store.state.auth.token
