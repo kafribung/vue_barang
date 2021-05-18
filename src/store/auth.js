@@ -3,12 +3,16 @@ export default {
     state:  {
         // Untuk tujuan belajar, data yang ada di state hanya dapat diakses di login
         // Sehingga data harus disimpan di localstorage
+        user: 'Kafri',
         token: null,
         errors: null,
     },
     getters: {
         getError: state => {
             return state.errors
+        },
+        getUser: state => {
+            return state.user
         }
     },
     mutations: {

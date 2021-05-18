@@ -89,16 +89,19 @@
 </template>
 
 <script>
-import { mapGetters} from 'vuex'
+// import { mapGetters} from 'vuex'
 export default {
   name: 'Dashboardcom',
   computed:{
-    // user(){
-    //   return this.$store.getters.user
-    // }
-    ...mapGetters([
-      'getT'
-    ])
+    getUser(){
+      // Tanpa getters langsung tembah state
+      return this.$store.state.auth.token
+      // Menggunaan getters
+      // return this.$store.getters.getUser
+    }
+    // ...mapGetters([
+    //   'getUser'
+    // ])
   }
 }
 </script>
