@@ -45,9 +45,6 @@ export default {
             'getError'
         ])
     },
-    created() {
-        console.log(this.getError);
-    },
     methods: {
         // Cara 1 Action
         // handleLogin(){
@@ -58,8 +55,12 @@ export default {
             'login'
         ]),
         handleLogin(){
-            this.login(this.form)
-            // this.$router.push('/dashboard');
+            if (this.login(this.form)) {
+                // this.$router.push('/dashboard')
+                console.log('dashboard')
+            }
+                console.log('login')
+            // this.$router.push('/login')
         },
     },
 }

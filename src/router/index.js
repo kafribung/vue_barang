@@ -12,7 +12,10 @@ const routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: Dashboard
+    component: Dashboard,
+    // beforeEnter: (to, from, next) => {
+      
+    // }
   },
   {
     path: '/login',

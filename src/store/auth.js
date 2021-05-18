@@ -26,6 +26,8 @@ export default {
                 const response = await axios.post('http://127.0.0.1:8000/api/login', data);
                 // Mengirim data ke method attemp
                 dispatch('attemp', response.data.data.token)
+                localStorage.setItem('token', response.data.data.token)
+                
             } catch (error) {
                 // Langusung melakukan mutasi, tanpa mengirim data
                 commit('SET_ERROR', error.response.data.msg)
