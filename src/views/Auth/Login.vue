@@ -55,11 +55,7 @@ export default {
             'login'
         ]),
         handleLogin(){
-            if (this.login(this.form)) {
-                this.$router.push('/dashboard')
-            } else{
-                console.log(this.getError);
-            }
+            this.login(this.form)
         },
     },
 }
