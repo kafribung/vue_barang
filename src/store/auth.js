@@ -27,8 +27,8 @@ export default {
                 // Mengirim data ke method attemp
                 dispatch('attemp', response.data.data.token)
                 localStorage.setItem('token', response.data.data.token)
-                
-            } catch (error) {
+            }
+            catch (error) {
                 // Langusung melakukan mutasi, tanpa mengirim data
                 commit('SET_ERROR', error.response.data.msg)
             }
