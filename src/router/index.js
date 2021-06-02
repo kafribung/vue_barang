@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
+import Inventory from '../views/Inventory.vue'
 // import axios from 'axios'
 
 Vue.use(VueRouter)
@@ -14,6 +15,11 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard,
+  },
+  {
+    path: 'inventory',
+    name: 'Inventory',
+    component: Inventory
   },
   {
     path: '/login',

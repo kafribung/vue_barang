@@ -329,7 +329,7 @@
             </div>
         </header>
         <!-- END Header -->
-        <Dashboardcomponent/>
+        <Inventorycomponent/>
       </div>
       <!-- END Headar & Main -->
     </div>
@@ -337,7 +337,7 @@
 </template>
 
 <script>
-import Dashboardcomponent from './../components/Dashboardcomponent'
+import Inventorycomponent from './../components/Inventorycomponent'
 export default {
     name: "Invetory",
     data() {
@@ -366,7 +366,7 @@ export default {
         }
     },
     components: {
-        Dashboardcomponent,
+        Inventorycomponent,
     },
 };
 </script>
