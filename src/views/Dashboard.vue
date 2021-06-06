@@ -258,7 +258,6 @@ export default {
         }
     },
     components: {
-        Sidebar,
         Dashboardcomponent,
     },
 };
