@@ -253,7 +253,7 @@ export default {
             this.toggleTheme = !this.toggleTheme
             } else {
             document.documentElement.classList.remove('dark')
-            this.toggleTheme = !this.toggleTheme
+            // this.toggleTheme = !this.toggleTheme
             }
         }
     },
